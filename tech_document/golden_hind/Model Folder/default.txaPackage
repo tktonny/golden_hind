@@ -1,0 +1,324 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+
+<nodeSet  version="1.1">
+	<node uin="j8ctxykg9msk12-iws10f">
+		<property name="$metaclass" value="StateMachine"/>
+		<property name="$name" value="导航图"/>
+		<node uin="-acitv2kg9msk13iqgdt3">
+			<property name="$metaclass" value="Region20"/>
+			<property name="$name" value="Region20"/>
+			<node uin="1g64ykg9nbpy8-ag3f2y">
+				<property name="$metaclass" value="Note"/>
+				<property name="$name" value="Note1"/>
+				<property name="$note_text" value="手机号验证码注册&#10;注册时区分注册类型&#10;注册时填写密码&#10;（填写基本信息//可选）"/>
+				<link uin="ieje0rkg9ndjfc-l3ebub">
+					<property name="$metaclass" value="Note Link"/>
+					<participant referencedUin="design:node:::1g64ykg9nbpy8-ag3f2y:-acitv2kg9msk13iqgdt3:j8ctxykg9msk12-iws10f" role="Client"></participant>
+					<participant referencedUin="design:node:::-3uf15dkg9mv30f87ktvq:-acitv2kg9msk13iqgdt3:j8ctxykg9msk12-iws10f" role="Supplier"></participant>
+				</link>
+			</node>
+			<node uin="-3uf15dkg9mty0q-abe97d">
+				<property name="$metaclass" value="State20"/>
+				<property name="$name" value="主页（含登录）"/>
+				<node uin="-acitv2kg9mty0r-mgmkun">
+					<property name="$metaclass" value="Region20"/>
+					<property name="$name" value="Region20"/>
+				</node>
+				<link uin="ieje0rkg9mw5cu-60vvc3">
+					<property name="$metaclass" value="TransitionLink20"/>
+					<property name="label" value="投资者登录"/>
+					<participant referencedUin="design:node:::-3uf15dkg9mty0q-abe97d:-acitv2kg9msk13iqgdt3:j8ctxykg9msk12-iws10f" role="Client"></participant>
+					<participant referencedUin="design:node:::-3uf15dkg9mup22acse9a:-acitv2kg9msk13iqgdt3:j8ctxykg9msk12-iws10f" role="Supplier"></participant>
+				</link>
+				<link uin="ieje0rkg9mxnyn7c63i2">
+					<property name="$metaclass" value="TransitionLink20"/>
+					<property name="label" value="理财经理登录"/>
+					<participant referencedUin="design:node:::-3uf15dkg9mty0q-abe97d:-acitv2kg9msk13iqgdt3:j8ctxykg9msk12-iws10f" role="Client"></participant>
+					<participant referencedUin="design:node:::-3uf15dkg9muwtj-dokg1v:-acitv2kg9msk13iqgdt3:j8ctxykg9msk12-iws10f" role="Supplier"></participant>
+				</link>
+				<link uin="ieje0rkg9mxq2r47iulr">
+					<property name="$metaclass" value="TransitionLink20"/>
+					<property name="label" value="新用户注册"/>
+					<participant referencedUin="design:node:::-3uf15dkg9mty0q-abe97d:-acitv2kg9msk13iqgdt3:j8ctxykg9msk12-iws10f" role="Client"></participant>
+					<participant referencedUin="design:node:::-3uf15dkg9mv30f87ktvq:-acitv2kg9msk13iqgdt3:j8ctxykg9msk12-iws10f" role="Supplier"></participant>
+				</link>
+			</node>
+			<node uin="-3uf15dkg9mup22acse9a">
+				<property name="$metaclass" value="State20"/>
+				<property name="$name" value="投资者主页"/>
+				<node uin="-acitv2kg9mup23-92yf10">
+					<property name="$metaclass" value="Region20"/>
+					<property name="$name" value="Region20"/>
+				</node>
+				<link uin="ieje0rkg9nqj7gekfu5v">
+					<property name="$metaclass" value="TransitionLink20"/>
+					<participant referencedUin="design:node:::-3uf15dkg9mup22acse9a:-acitv2kg9msk13iqgdt3:j8ctxykg9msk12-iws10f" role="Client"></participant>
+					<participant referencedUin="design:node:::-3uf15dkg9npumx-7b6x7t:-acitv2kg9msk13iqgdt3:j8ctxykg9msk12-iws10f" role="Supplier"></participant>
+				</link>
+				<link uin="ieje0rkg9ntat95z5kga">
+					<property name="$metaclass" value="TransitionLink20"/>
+					<participant referencedUin="design:node:::-3uf15dkg9mup22acse9a:-acitv2kg9msk13iqgdt3:j8ctxykg9msk12-iws10f" role="Client"></participant>
+					<participant referencedUin="design:node:::-3uf15dkg9nskbw-7pyd7v:-acitv2kg9msk13iqgdt3:j8ctxykg9msk12-iws10f" role="Supplier"></participant>
+				</link>
+				<link uin="ieje0rkg9ntmww3bl8wy">
+					<property name="$metaclass" value="TransitionLink20"/>
+					<participant referencedUin="design:node:::-3uf15dkg9mup22acse9a:-acitv2kg9msk13iqgdt3:j8ctxykg9msk12-iws10f" role="Client"></participant>
+					<participant referencedUin="design:node:::-3uf15dkg9np7ew-mwnbx2:-acitv2kg9msk13iqgdt3:j8ctxykg9msk12-iws10f" role="Supplier"></participant>
+				</link>
+				<link uin="ieje0rkg9ntoqk2twe92">
+					<property name="$metaclass" value="TransitionLink20"/>
+					<participant referencedUin="design:node:::-3uf15dkg9mup22acse9a:-acitv2kg9msk13iqgdt3:j8ctxykg9msk12-iws10f" role="Client"></participant>
+					<participant referencedUin="design:node:::-3uf15dkg9nppq5i2yq5c:-acitv2kg9msk13iqgdt3:j8ctxykg9msk12-iws10f" role="Supplier"></participant>
+				</link>
+				<link uin="ieje0rkg9ntqa5-yjwftw">
+					<property name="$metaclass" value="TransitionLink20"/>
+					<participant referencedUin="design:node:::-3uf15dkg9mup22acse9a:-acitv2kg9msk13iqgdt3:j8ctxykg9msk12-iws10f" role="Client"></participant>
+					<participant referencedUin="design:node:::-3uf15dkg9nszas-rp289y:-acitv2kg9msk13iqgdt3:j8ctxykg9msk12-iws10f" role="Supplier"></participant>
+				</link>
+			</node>
+			<node uin="-3uf15dkg9muwtj-dokg1v">
+				<property name="$metaclass" value="State20"/>
+				<property name="$name" value="理财经理主页"/>
+				<node uin="-acitv2kg9muwtk6svoq">
+					<property name="$metaclass" value="Region20"/>
+					<property name="$name" value="Region20"/>
+				</node>
+				<link uin="ieje0rkg9nql4g-fjgq0v">
+					<property name="$metaclass" value="TransitionLink20"/>
+					<participant referencedUin="design:node:::-3uf15dkg9muwtj-dokg1v:-acitv2kg9msk13iqgdt3:j8ctxykg9msk12-iws10f" role="Client"></participant>
+					<participant referencedUin="design:node:::-3uf15dkg9npumx-7b6x7t:-acitv2kg9msk13iqgdt3:j8ctxykg9msk12-iws10f" role="Supplier"></participant>
+				</link>
+				<link uin="ieje0rkg9ntdkh-bqz2wf">
+					<property name="$metaclass" value="TransitionLink20"/>
+					<participant referencedUin="design:node:::-3uf15dkg9muwtj-dokg1v:-acitv2kg9msk13iqgdt3:j8ctxykg9msk12-iws10f" role="Client"></participant>
+					<participant referencedUin="design:node:::-3uf15dkg9nskbw-7pyd7v:-acitv2kg9msk13iqgdt3:j8ctxykg9msk12-iws10f" role="Supplier"></participant>
+				</link>
+				<link uin="ieje0rkg9nv679-rct8oi">
+					<property name="$metaclass" value="TransitionLink20"/>
+					<participant referencedUin="design:node:::-3uf15dkg9muwtj-dokg1v:-acitv2kg9msk13iqgdt3:j8ctxykg9msk12-iws10f" role="Client"></participant>
+					<participant referencedUin="design:node:::-3uf15dkg9nuxdteirfs6:-acitv2kg9msk13iqgdt3:j8ctxykg9msk12-iws10f" role="Supplier"></participant>
+				</link>
+			</node>
+			<node uin="-3uf15dkg9mv30f87ktvq">
+				<property name="$metaclass" value="State20"/>
+				<property name="$name" value="注册页面"/>
+				<node uin="-acitv2kg9mv30f-l3xw5q">
+					<property name="$metaclass" value="Region20"/>
+					<property name="$name" value="Region20"/>
+				</node>
+				<link uin="ieje0rkg9nj8pk-lgq8f0">
+					<property name="$metaclass" value="TransitionLink20"/>
+					<participant referencedUin="design:node:::-3uf15dkg9mv30f87ktvq:-acitv2kg9msk13iqgdt3:j8ctxykg9msk12-iws10f" role="Client"></participant>
+					<participant referencedUin="design:node:::-3uf15dkg9nieqkfltgh9:-acitv2kg9msk13iqgdt3:j8ctxykg9msk12-iws10f" role="Supplier"></participant>
+				</link>
+				<link uin="ieje0rkg9njb4s-164fp0">
+					<property name="$metaclass" value="TransitionLink20"/>
+					<participant referencedUin="design:node:::-3uf15dkg9mv30f87ktvq:-acitv2kg9msk13iqgdt3:j8ctxykg9msk12-iws10f" role="Client"></participant>
+					<participant referencedUin="design:node:::-3uf15dkg9nisvg-vbaolb:-acitv2kg9msk13iqgdt3:j8ctxykg9msk12-iws10f" role="Supplier"></participant>
+				</link>
+			</node>
+			<node uin="1g64ykg9ne0dk-s4qkg0">
+				<property name="$metaclass" value="Note"/>
+				<property name="$name" value="Note2"/>
+				<property name="$note_text" value="登录按钮&#10;反馈意见窗口"/>
+				<link uin="ieje0rkg9neo2r-pvikf2">
+					<property name="$metaclass" value="Note Link"/>
+					<participant referencedUin="design:node:::1g64ykg9ne0dk-s4qkg0:-acitv2kg9msk13iqgdt3:j8ctxykg9msk12-iws10f" role="Client"></participant>
+					<participant referencedUin="design:node:::-3uf15dkg9mty0q-abe97d:-acitv2kg9msk13iqgdt3:j8ctxykg9msk12-iws10f" role="Supplier"></participant>
+				</link>
+			</node>
+			<node uin="-3uf15dkg9nieqkfltgh9">
+				<property name="$metaclass" value="State20"/>
+				<property name="$name" value="投资者新用户"/>
+				<node uin="-acitv2kg9nieql5oels0">
+					<property name="$metaclass" value="Region20"/>
+					<property name="$name" value="Region20"/>
+				</node>
+			</node>
+			<node uin="-3uf15dkg9nisvg-vbaolb">
+				<property name="$metaclass" value="State20"/>
+				<property name="$name" value="投资经理新用户"/>
+				<node uin="-acitv2kg9nisvh-k7k6eu">
+					<property name="$metaclass" value="Region20"/>
+					<property name="$name" value="Region20"/>
+				</node>
+			</node>
+			<node uin="1g64ykg9nmtps274wss">
+				<property name="$metaclass" value="Note"/>
+				<property name="$name" value="Note3"/>
+				<property name="$note_text" value="风险偏好问卷&#10;投资信息&#10;绑定花旗"/>
+				<node uin="1g64ykg9nnzc8-lqx7t2">
+					<property name="$metaclass" value="Note"/>
+					<property name="$name" value="Note1"/>
+				</node>
+				<link uin="ieje0rkg9nnmglfek8lf">
+					<property name="$metaclass" value="Note Link"/>
+					<participant referencedUin="design:node:::1g64ykg9nmtps274wss:-acitv2kg9msk13iqgdt3:j8ctxykg9msk12-iws10f" role="Client"></participant>
+					<participant referencedUin="design:node:::-3uf15dkg9nieqkfltgh9:-acitv2kg9msk13iqgdt3:j8ctxykg9msk12-iws10f" role="Supplier"></participant>
+				</link>
+			</node>
+			<node uin="1g64ykg9no5uv-5fizdz">
+				<property name="$metaclass" value="Note"/>
+				<property name="$name" value="Note4"/>
+				<property name="$note_text" value="工作信息"/>
+				<link uin="ieje0rkg9noeu8-otyehi">
+					<property name="$metaclass" value="Note Link"/>
+					<participant referencedUin="design:node:::1g64ykg9no5uv-5fizdz:-acitv2kg9msk13iqgdt3:j8ctxykg9msk12-iws10f" role="Client"></participant>
+					<participant referencedUin="design:node:::-3uf15dkg9nisvg-vbaolb:-acitv2kg9msk13iqgdt3:j8ctxykg9msk12-iws10f" role="Supplier"></participant>
+				</link>
+			</node>
+			<node uin="-3uf15dkg9np7ew-mwnbx2">
+				<property name="$metaclass" value="State20"/>
+				<property name="$name" value="查看过去投顾"/>
+				<node uin="-acitv2kg9np7ex-vmcugc">
+					<property name="$metaclass" value="Region20"/>
+					<property name="$name" value="Region20"/>
+				</node>
+				<link uin="ieje0rkg9o8vwqu6p9i7">
+					<property name="$metaclass" value="TransitionLink20"/>
+					<participant referencedUin="design:node:::-3uf15dkg9np7ew-mwnbx2:-acitv2kg9msk13iqgdt3:j8ctxykg9msk12-iws10f" role="Client"></participant>
+					<participant referencedUin="design:node:::-3uf15dkg9o8pmxv7mxfc:-acitv2kg9msk13iqgdt3:j8ctxykg9msk12-iws10f" role="Supplier"></participant>
+				</link>
+			</node>
+			<node uin="-3uf15dkg9nppq5i2yq5c">
+				<property name="$metaclass" value="State20"/>
+				<property name="$name" value="查看用户画像"/>
+				<node uin="-acitv2kg9nppq59f7omq">
+					<property name="$metaclass" value="Region20"/>
+					<property name="$name" value="Region20"/>
+				</node>
+			</node>
+			<node uin="-3uf15dkg9npumx-7b6x7t">
+				<property name="$metaclass" value="State20"/>
+				<property name="$name" value="完善信息"/>
+				<node uin="-acitv2kg9npumxzaa22m">
+					<property name="$metaclass" value="Region20"/>
+					<property name="$name" value="Region20"/>
+				</node>
+			</node>
+			<node uin="-3uf15dkg9nskbw-7pyd7v">
+				<property name="$metaclass" value="State20"/>
+				<property name="$name" value="查看理财产品"/>
+				<node uin="-acitv2kg9nskbxqoyeld">
+					<property name="$metaclass" value="Region20"/>
+					<property name="$name" value="Region20"/>
+				</node>
+			</node>
+			<node uin="-3uf15dkg9nszas-rp289y">
+				<property name="$metaclass" value="State20"/>
+				<property name="$name" value="发起投顾"/>
+				<node uin="-acitv2kg9nszat-chmo4w">
+					<property name="$metaclass" value="Region20"/>
+					<property name="$name" value="Region20"/>
+				</node>
+				<link uin="ieje0rkg9nw10a-dfv7yi">
+					<property name="$metaclass" value="TransitionLink20"/>
+					<participant referencedUin="design:node:::-3uf15dkg9nszas-rp289y:-acitv2kg9msk13iqgdt3:j8ctxykg9msk12-iws10f" role="Client"></participant>
+					<participant referencedUin="design:node:::-3uf15dkg9nvukt-eew2y9:-acitv2kg9msk13iqgdt3:j8ctxykg9msk12-iws10f" role="Supplier"></participant>
+				</link>
+			</node>
+			<node uin="-3uf15dkg9nuxdteirfs6">
+				<property name="$metaclass" value="State20"/>
+				<property name="$name" value="查询页面"/>
+				<node uin="-acitv2kg9nuxdu-a1vfkw">
+					<property name="$metaclass" value="Region20"/>
+					<property name="$name" value="Region20"/>
+				</node>
+				<link uin="ieje0rkg9o3owx-6i4sp8">
+					<property name="$metaclass" value="TransitionLink20"/>
+					<participant referencedUin="design:node:::-3uf15dkg9nuxdteirfs6:-acitv2kg9msk13iqgdt3:j8ctxykg9msk12-iws10f" role="Client"></participant>
+					<participant referencedUin="design:node:::-3uf15dkg9o0aquyu3dh:-acitv2kg9msk13iqgdt3:j8ctxykg9msk12-iws10f" role="Supplier"></participant>
+				</link>
+				<link uin="ieje0rkg9o4oc5-c531l7">
+					<property name="$metaclass" value="TransitionLink20"/>
+					<participant referencedUin="design:node:::-3uf15dkg9nuxdteirfs6:-acitv2kg9msk13iqgdt3:j8ctxykg9msk12-iws10f" role="Client"></participant>
+					<participant referencedUin="design:node:::-3uf15dkg9o4bqe-n288o:-acitv2kg9msk13iqgdt3:j8ctxykg9msk12-iws10f" role="Supplier"></participant>
+				</link>
+			</node>
+			<node uin="-3uf15dkg9nvukt-eew2y9">
+				<property name="$metaclass" value="State20"/>
+				<property name="$name" value="投顾结果"/>
+				<node uin="-acitv2kg9nvukt-bp8dmd">
+					<property name="$metaclass" value="Region20"/>
+					<property name="$name" value="Region20"/>
+				</node>
+			</node>
+			<node uin="-3uf15dkg9o0aquyu3dh">
+				<property name="$metaclass" value="State20"/>
+				<property name="$name" value="客户页面"/>
+				<node uin="-acitv2kg9o0aqu-b2t9gr">
+					<property name="$metaclass" value="Region20"/>
+					<property name="$name" value="Region20"/>
+				</node>
+				<link uin="ieje0rkg9o3r0l-7kezqd">
+					<property name="$metaclass" value="TransitionLink20"/>
+					<participant referencedUin="design:node:::-3uf15dkg9o0aquyu3dh:-acitv2kg9msk13iqgdt3:j8ctxykg9msk12-iws10f" role="Client"></participant>
+					<participant referencedUin="design:node:::-3uf15dkg9o1tfa-e53go9:-acitv2kg9msk13iqgdt3:j8ctxykg9msk12-iws10f" role="Supplier"></participant>
+				</link>
+			</node>
+			<node uin="-3uf15dkg9o1tfa-e53go9">
+				<property name="$metaclass" value="State20"/>
+				<property name="$name" value="详情页面"/>
+				<node uin="-acitv2kg9o1tfavx3s8y">
+					<property name="$metaclass" value="Region20"/>
+					<property name="$name" value="Region20"/>
+				</node>
+			</node>
+			<node uin="-3uf15dkg9o4bqe-n288o">
+				<property name="$metaclass" value="State20"/>
+				<property name="$name" value="投顾页面"/>
+				<node uin="-acitv2kg9o4bqf-2d7unq">
+					<property name="$metaclass" value="Region20"/>
+					<property name="$name" value="Region20"/>
+				</node>
+			</node>
+			<node uin="1g64ykg9o5y0x-xlr1b8">
+				<property name="$metaclass" value="Note"/>
+				<property name="$name" value="Note5"/>
+				<property name="$note_text" value="多种查询"/>
+				<link uin="ieje0rkg9o68k6l2zpp0">
+					<property name="$metaclass" value="Note Link"/>
+					<participant referencedUin="design:node:::1g64ykg9o5y0x-xlr1b8:-acitv2kg9msk13iqgdt3:j8ctxykg9msk12-iws10f" role="Client"></participant>
+					<participant referencedUin="design:node:::-3uf15dkg9nuxdteirfs6:-acitv2kg9msk13iqgdt3:j8ctxykg9msk12-iws10f" role="Supplier"></participant>
+				</link>
+			</node>
+			<node uin="1g64ykg9o82d2-jztvu3">
+				<property name="$metaclass" value="Note"/>
+				<property name="$name" value="Note6"/>
+				<property name="$note_text" value="查询页面"/>
+				<link uin="ieje0rkg9o8e021mremv">
+					<property name="$metaclass" value="Note Link"/>
+					<participant referencedUin="design:node:::1g64ykg9o82d2-jztvu3:-acitv2kg9msk13iqgdt3:j8ctxykg9msk12-iws10f" role="Client"></participant>
+					<participant referencedUin="design:node:::-3uf15dkg9np7ew-mwnbx2:-acitv2kg9msk13iqgdt3:j8ctxykg9msk12-iws10f" role="Supplier"></participant>
+				</link>
+			</node>
+			<node uin="-3uf15dkg9o8pmxv7mxfc">
+				<property name="$metaclass" value="State20"/>
+				<property name="$name" value="详细信息"/>
+				<node uin="-acitv2kg9o8pmy-yxqd3z">
+					<property name="$metaclass" value="Region20"/>
+					<property name="$name" value="Region20"/>
+				</node>
+			</node>
+			<node uin="1g64ykg9o965yhvuw3f">
+				<property name="$metaclass" value="Note"/>
+				<property name="$name" value="Note7"/>
+				<property name="$note_text" value="查询页面；点击详情."/>
+				<link uin="ieje0rkg9o9j3alp2yre">
+					<property name="$metaclass" value="Note Link"/>
+					<participant referencedUin="design:node:::1g64ykg9o965yhvuw3f:-acitv2kg9msk13iqgdt3:j8ctxykg9msk12-iws10f" role="Client"></participant>
+					<participant referencedUin="design:node:::-3uf15dkg9nskbw-7pyd7v:-acitv2kg9msk13iqgdt3:j8ctxykg9msk12-iws10f" role="Supplier"></participant>
+				</link>
+			</node>
+		</node>
+	</node>
+	<node uin="j8ctxykg9o6piib94bmc">
+		<property name="$metaclass" value="StateMachine"/>
+		<property name="$name" value="StateMachine1"/>
+		<node uin="-acitv2kg9o6pij-oijtd1">
+			<property name="$metaclass" value="Region20"/>
+			<property name="$name" value="Region20"/>
+		</node>
+	</node>
+</nodeSet>
