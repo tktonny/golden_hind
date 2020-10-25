@@ -1,3 +1,8 @@
+@font-face {
+    font-family: slim;
+    src: url(../font/slim.ttf)
+}
+
 body {
     margin: 0px;
     background-color: #1e1e1e;
