@@ -46,6 +46,11 @@
             });
         });
     </script>
+    <!--左侧radar-->
+    <script src="https://cdn.bootcss.com/echarts/4.4.0-rc.1/echarts.min.js"></script>
+    <script src="./js/radar.js"></script>
+    <!--右侧新闻ajax-->
+    <script src="./js/index_news.js"></script>
 </head>
 
 <body>
@@ -83,10 +88,11 @@
     <div style="height: 100px;"></div>
     <div class="container" style="width: 100%;">
         <div class="hidden-xs col-md-4">
-            <div id="radar" style="height: 700px;"></div>
+            <div id="radar" style="height: 500px;"></div>
+            <button style="text-align: center;left: 50%;margin-left: -49px; position: absolute;">查看画像</button>
         </div>
         <div class="col-md-8">
-            <div style="background-color: rgba(255, 255, 255, 0.05); height: 250px;padding-bottom: 3px;">
+            <div style="background-color: rgba(255, 255, 255, 0.05); height: 250px;margin-bottom: 10px;">
                 <div class="visible-lg visible-md column col-md-6">
                     <div class="carousel slide" id="carousel-949614">
                         <ol class="carousel-indicators">
@@ -99,15 +105,15 @@
                         </ol>
                         <div class="carousel-inner">
                             <div class="item active">
-                                <li class="newsroll"> <img id="news1" alt="news1" src="./images/news1.jpeg" />
+                                <li class="newsroll"> <img id="news_1_pic" alt="news1" src="./images/news1.jpeg" />
                                 </li>
                             </div>
                             <div class="item">
-                                <li class="newsroll"><img id="news2" alt="news2" src="./images/news2.jpeg" />
+                                <li class="newsroll"><img id="news_2_pic" alt="news2" src="./images/news2.jpeg" />
                                 </li>
                             </div>
                             <div class="item">
-                                <li class="newsroll"><img id="news2" alt="news3" src="./images/news3.jpeg" />
+                                <li class="newsroll"><img id="news_3_pic" alt="news3" src="./images/news3.jpeg" />
                                 </li>
                             </div>
                         </div>
@@ -123,13 +129,13 @@
                     <p style="font-size: 30px; color: white;">新闻</p>
                     <ul>
                         <li style="height: 45px;">
-                            <a id="news_1" target="_blank" href="www.baidu.com" style="font-size: 15px; color: whitesmoke;">news1</a>
+                            <a id="news_1_title" target="_blank" href="www.baidu.com" style="font-size: 15px; color: whitesmoke;">news1</a>
                         </li>
                         <li style="height: 45px;">
-                            <a id="news_2" target="_blank" href="www.baidu.com" style="font-size: 15px; color: whitesmoke;">news2</a>
+                            <a id="news_2_title" target="_blank" href="www.baidu.com" style="font-size: 15px; color: whitesmoke;">news2</a>
                         </li>
                         <li style="height: 45px;">
-                            <a id="news_3" target="_blank" href="www.baidu.com" style="font-size: 15px; color: whitesmoke;">news3</a>
+                            <a id="news_3_title" target="_blank" href="www.baidu.com" style="font-size: 15px; color: whitesmoke;">news3</a>
                         </li>
                         <li style="height: 45px;">
                             <a href="./news.html" target="_blank" style="font-size: 15px; color: rgba(245, 245, 245, 0.7);">more...</a>
@@ -142,12 +148,12 @@
                     <li style="padding: 3px;border-bottom:1px solid rgba(255, 255, 255, 0.1);">
                         <div class="container" style="width: 100%;">
                             <div class="col-sm-6">
-                                <a href="#"><img src="./images/work/1.jpg" alt="MyPassion" class="alignleft"></a>
+                                <a href="#"><img src="./images/work/1.jpg" alt="MyPassion" class="alignleft" id="news_4_pic"></a>
                             </div>
                             <div class="col-sm-6">
                                 <p>
-                                    <span>26 May, 2013.</span><br>
-                                    <a href="#">Blandit Rutrum, Erat et Sagittis.</a>
+                                    <span id="news_4_date">26 May, 2013.</span><br>
+                                    <a href="#" id="news_4_title">Blandit Rutrum, Erat et Sagittis.</a>
                                 </p>
                             </div>
                         </div>
@@ -155,12 +161,12 @@
                     <li style="padding: 3px;border-bottom:1px solid rgba(255, 255, 255, 0.1);">
                         <div class="container" style="width: 100%;">
                             <div class="col-sm-6">
-                                <a href="#"><img src="./images/work/2.jpg" alt="MyPassion" class="alignleft"></a>
+                                <a href="#"><img src="./images/work/2.jpg" alt="MyPassion" class="alignleft" id="news_5_pic"></a>
                             </div>
                             <div class="col-sm-6">
                                 <p>
-                                    <span>26 May, 2013.</span><br>
-                                    <a href="#">Blandit Rutrum, Erat et Sagittis.</a>
+                                    <span id="news_5_date">26 May, 2013.</span><br>
+                                    <a href="#" id="news_5_title">Blandit Rutrum, Erat et Sagittis.</a>
                                 </p>
                             </div>
                         </div>
@@ -168,12 +174,12 @@
                     <li style="padding: 3px;border-bottom:1px solid rgba(255, 255, 255, 0.1);">
                         <div class="container" style="width: 100%;">
                             <div class="col-sm-6">
-                                <a href="#"><img src="./images/work/3.jpg" alt="MyPassion" class="alignleft"></a>
+                                <a href="#"><img src="./images/work/3.jpg" alt="MyPassion" class="alignleft" id="news_6_pic"></a>
                             </div>
                             <div class="col-sm-6">
                                 <p>
-                                    <span>26 May, 2013.</span><br>
-                                    <a href="#">Blandit Rutrum, Erat et Sagittis.</a>
+                                    <span id="news_6_date">26 May, 2013.</span><br>
+                                    <a href="#" id="news_6_title">Blandit Rutrum, Erat et Sagittis.</a>
                                 </p>
                             </div>
                         </div>
@@ -185,12 +191,12 @@
                     <li style="padding: 3px;border-bottom:1px solid rgba(255, 255, 255, 0.1);">
                         <div class="container" style="width: 100%;">
                             <div class="col-sm-6">
-                                <a href="#"><img src="./images/work/4.jpg" alt="MyPassion" class="alignleft"></a>
+                                <a href="#"><img src="./images/work/4.jpg" alt="MyPassion" class="alignleft" id="news_7_pic"></a>
                             </div>
                             <div class="col-sm-6">
                                 <p>
-                                    <span>26 May, 2013.</span><br>
-                                    <a href="#">Blandit Rutrum, Erat et Sagittis.</a>
+                                    <span id="news_7_date">26 May, 2013.</span><br>
+                                    <a href="#" id="news_7_title">Blandit Rutrum, Erat et Sagittis.</a>
                                 </p>
                             </div>
                         </div>
@@ -198,12 +204,12 @@
                     <li style="padding: 3px;border-bottom:1px solid rgba(255, 255, 255, 0.1);">
                         <div class="container" style="width: 100%;">
                             <div class="col-sm-6">
-                                <a href="#"><img src="./images/work/5.jpg" alt="MyPassion" class="alignleft"></a>
+                                <a href="#"><img src="./images/work/5.jpg" alt="MyPassion" class="alignleft" id="news_8_pic"></a>
                             </div>
                             <div class="col-sm-6">
                                 <p>
-                                    <span>26 May, 2013.</span><br>
-                                    <a href="#">Blandit Rutrum, Erat et Sagittis.</a>
+                                    <span id="news_8_date">26 May, 2013.</span><br>
+                                    <a href="#" id="news_8_title">Blandit Rutrum, Erat et Sagittis.</a>
                                 </p>
                             </div>
                         </div>
@@ -211,12 +217,12 @@
                     <li style="padding: 3px;border-bottom:1px solid rgba(255, 255, 255, 0.1);">
                         <div class="container" style="width: 100%;">
                             <div class="col-sm-6">
-                                <a href="#"><img src="./images/work/6.jpg" alt="MyPassion" class="alignleft"></a>
+                                <a href="#"><img src="./images/work/6.jpg" alt="MyPassion" class="alignleft" id="news_9_pic"></a>
                             </div>
                             <div class="col-sm-6">
                                 <p>
-                                    <span>26 May, 2013.</span><br>
-                                    <a href="#">Blandit Rutrum, Erat et Sagittis.</a>
+                                    <span id="news_9_date">26 May, 2013.</span><br>
+                                    <a href="#" id="news_9_title">Blandit Rutrum, Erat et Sagittis.</a>
                                 </p>
                             </div>
                         </div>

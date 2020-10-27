@@ -1,47 +1,42 @@
-var dataUrl  = "https://lab.isaaclin.cn/nCoV/";
-var dataUrlBackup  = "http://api.tianapi.com/txapi/rumour/index?key=51ada08c82189b4e519e27149e77e6fd";
+var dataUrl = "http://api.tianapi.com/caijing/index?key=564db19f863a9e3a00b231c1e48160ea&num=50";
+var dataUrlBackup = "http://api.tianapi.com/caijing/index?key=564db19f863a9e3a00b231c1e48160ea&num=50";
 
-$(document).ready(function () {
+$(document).ready(function() {
     initNews();
 });
 
-var initNews = function(province) {
+var initNews = function() {
     $.ajax({
-        url: dataUrl + 'api/news?num=100',
+        url: dataUrl,
         type: 'get',
-        success: function (res) {
-            if (res.success===true ){
-                var news = res.results;
+        success: function(res) {
+            if (res.msg === "success") {
+                var news = res.newslist;
+                console.log(news)
                 var html = "";
                 for (var i in news) {
-                        html +='<div class="item">\n' +
-                        '            <div class="item-heading">\n' +
+                    html += '<div class="item">\n' +
+                        '       <div class = "container" style="width:100%">\n' +
+                        '           <div class="col-sm-2"><img src="' + news[i].picUrl + '" alt="news_pic" style="height: 79px;"></div>\n' +
+                        '           <div class="col-sm-10"><div class="item-heading">\n' +
                         '                <div class="pull-right label label-success news-province">新闻</div>\n' +
-                        '                <h4><a href="'+news[i].sourceUrl+'" class="news-title" target="_blank">'+news[i].title+'</a></h4>\n' +
-                        '            </div>\n' +
-                        '            <div class="item-content news-detail" >\n' + news[i].summary+
-                        '            </div>\n' +
-                        '            <div class="item-footer">\n' +
-                        '                <span class="text-muted"><i class="icon-comments news-source"></i> '+news[i].infoSource+'</span> &nbsp; <span class="text-muted news-time">'+timestampToTime(news[i].pubDate) +'</span>\n' +
-                        '            </div>\n' +
-                        '        </div>';
-                }
-
-                function timestampToTime(timestamp) {
-                    var date = new Date(parseInt(timestamp));
-                    var Y = date.getFullYear() + '-';
-                    var M = (date.getMonth() + 1 < 10 ? '0' + (date.getMonth() + 1) : date.getMonth() + 1) + '-';
-                    var D = date.getDate();
-                    return Y + M + D;
+                        '                <h4><a href="' + news[i].url + '" class="news-title" target="_blank">' + news[i].title + '</a></h4>\n' +
+                        '               </div>\n' +
+                        '               <div class="item-footer">\n' +
+                        '                   <span class="text-muted"><i class="icon-comments news-source"></i> ' + news[i].description + '</span> &nbsp; <span class="text-muted news-time">' + news[i].ctime + '</span>\n' +
+                        '               </div>\n' +
+                        '           </div>\n' +
+                        '       </div>\n' +
+                        '   </div>';
                 }
 
                 $(".items").html(html);
 
-                return ;
+                return;
             }
             alert("获取数据失败");
         },
-        error:function (res) {
+        error: function(res) {
             if (res.state() === "rejected" && !this.url.includes(dataUrlBackup)) {
                 this.url = this.url.replace(dataUrl, dataUrlBackup);
                 $.ajax(this);
