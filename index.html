@@ -516,24 +516,24 @@
                     </div>
                 </div>
                 <div class="col-md-6 wow fadeInRight animated" data-wow-delay="0.2s">
-                    <form id="contact-form" action="#" name="contactform" method="post" class="contact-form">
+                    <form id="contact-form" action="https://formspree.io/f/xqkgbzqn" name="contactform" method="post" class="contact-form">
                         <div class="row parlex-back">
                             <div class="col-md-6">
                                 <input type="text" name="name" id="e_name" class="form-control" placeholder="姓名" />
                             </div>
                             <div class="col-md-6">
-                                <input type="text" name="email" id="e_email" class="form-control" placeholder="邮箱" />
+                                <input type="text" name="_replyto" id="e_email" class="form-control" placeholder="邮箱" />
                             </div>
                         </div>
                         <div class="row parlex-back">
                             <div class="col-md-12">
-                                <textarea name="comments" id="e_comments" cols="30" rows="10" class="form-control" placeholder="您的留言"></textarea>
+                                <textarea name="message" id="e_comments" cols="30" rows="10" class="form-control" placeholder="您的留言"></textarea>
                             </div>
                         </div>
                         <div class="row">
                             <div class="col-md-12">
                                 <span class="pori-btn">
-                                    <input type="submit" class="submit-btn" id="submit" value="发送" onclick="SendEMail('golden_hind','comments')"/>
+                                    <input type="submit" class="submit-btn" id="submit" value="发送" />
                                 </span>
                             </div>
                         </div>
@@ -544,42 +544,6 @@
             <br><br>
         </div>
     </section>
-    <script>
-        /*
-         ** infor：邮件内容；
-         ** subject：邮件主题；
-         */
-        function SendEMail(infor, subject) {
-            // jMail组件对象
-            var jMail = new ActiveXObject("Jmail.message");
-            jMail.Silent = true;
-            jMail.Charset = "utf-8";
-
-            // 发送人
-            jMail.FromName = document.getElementById(e_name); //发件人
-            jMail.From = "[email=t_k_tonny@163.com]t_k_tonny@163.com[/email]"; // 发送人的邮件地址；
-
-            // 收件人
-            jMail.AddRecipient("[email=t_k_tonny@163.com]t_k_tonny@163.com[/email]"); // 收件人的邮件地址；
-
-            // 邮件信息
-            //  jMail.Subject = subject;
-            //  jMail.Body = infor;    
-            jMail.Subject = "邮件发送功能测试";
-            jMail.Body = "这是邮件内容，如果你能收到此邮件，说明此功能已实现！";
-
-            // 邮件服务
-            jMail.MailServerUserName = "[email=t_k_tonny@163.com]t_k_tonny@163.com[/email]";
-            jMail.MailServerPassWord = "TONNY21tonny21";
-            var returnstr = jMail.Send("smtp.163.com");
-            if (returnstr == false) {
-                alert("提示：邮件发送错误，请确认邮件地址是否正确；");
-            } else {
-                alert("提示：邮件已发送，请注意查收；");
-            }
-            jMail.Close(); // 关闭；
-        }
-    </script>
 
     <input type="submit" value="发送" οnclick="SendEMail(" "," ");" />
 
