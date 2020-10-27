@@ -5,6 +5,23 @@
     src: url(../font/slim.ttf)
 }
 
+::selection {
+    background: #000;
+    color: #Fff;
+}
+
+a:hover {
+    color: #fff!important;
+}
+
+li.newsroll {
+    width: 100%;
+    height: 250px;
+    border: 1px solid #000;
+    position: relative;
+    overflow: hidden;
+}
+
 div.card-body {
     background-color: rgba(211, 211, 211, 0.9);
     color: #000;

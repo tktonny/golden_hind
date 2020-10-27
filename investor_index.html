@@ -67,9 +67,13 @@
                 </div>
                 <div id="main-nav" class="collapse navbar-collapse">
                     <ul class="nav navbar-nav" id="mainNav">
-                        <li id="firstLink"><a href="./index.html" class="scroll-link">主页</a></li>
+                        <li class="active" id="firstLink"><a href="./investor_index.html" class="scroll-link">主页</a></li>
+                        <li><a href="#" class="scroll-link">发起投顾</a></li>
+                        <li><a href="#" class="scroll-link">历史投顾</a></li>
+                        <li><a href="./news.html" target="_blank" class="scroll-link">财经新闻</a></li>
                         <li style="font-size: 40px;" class="hidden-xs">|</li>
-                        <li class="active"><a href="#" class="scroll-link">登录/注册</a></li>
+                        <li><a href="#" class="scroll-link" id="investor_id">id:13917768723</a></li>
+                        <li><a href="#" class="scroll-link">修改信息</a></li>
                     </ul>
                 </div>
             </nav>
@@ -77,63 +81,147 @@
     </header>
 
     <div style="height: 100px;"></div>
-    <div class="container">
+    <div class="container" style="width: 100%;">
         <div class="hidden-xs col-md-4">
-            <div id="radar" style="height: 800px;"></div>
+            <div id="radar" style="height: 700px;"></div>
         </div>
         <div class="col-md-8">
-            <div class="row vr-gallery">
-                <div id="news1" class="col-md-4 pl-4 mb-4">
-                    <div class="card">
-                        <img class="card-img-top" src="images/gallery-img3.jpg" alt="">
-                        <div class="card-body">
-                            <p><small>march 27, 2020</small></p>
-                            <h3>Trendy Summer Fashion
-                            </h3>
-                            <p>To take a tr a man who chooses...</p>
+            <div style="background-color: rgba(255, 255, 255, 0.05); height: 250px;padding-bottom: 3px;">
+                <div class="visible-lg visible-md column col-md-6">
+                    <div class="carousel slide" id="carousel-949614">
+                        <ol class="carousel-indicators">
+                            <li class="active" data-slide-to="0" data-target="#carousel-949614">
+                            </li>
+                            <li data-slide-to="1" data-target="#carousel-949614">
+                            </li>
+                            <li data-slide-to="2" data-target="#carousel-949614">
+                            </li>
+                        </ol>
+                        <div class="carousel-inner">
+                            <div class="item active">
+                                <li class="newsroll"> <img id="news1" alt="news1" src="./images/news1.jpeg" />
+                                </li>
+                            </div>
+                            <div class="item">
+                                <li class="newsroll"><img id="news2" alt="news2" src="./images/news2.jpeg" />
+                                </li>
+                            </div>
+                            <div class="item">
+                                <li class="newsroll"><img id="news2" alt="news3" src="./images/news3.jpeg" />
+                                </li>
+                            </div>
                         </div>
+                        <a class="left carousel-control" href="#carousel-949614" data-slide="prev">
+                            <span class="glyphicon glyphicon-chevron-left"></span>
+                        </a>
+                        <a class="right carousel-control" href="#carousel-949614" data-slide="next">
+                            <span class="glyphicon glyphicon-chevron-right"></span>
+                        </a>
                     </div>
                 </div>
-                <div id="news1" class="col-md-8 pl-4 mb-4" style="height: 420px;">
-                    <div class="row card-body" style=" height: 400px; margin-bottom: 20px;">
-                        <div class="col-md-12 col-lg-7 pr-0 pd-md">
-                            <img src="images/gallery-img1.png" alt="">
-                        </div>
-                        <div class="col-md-12 col-lg-5 card-body">
-                            <p><small>march 27, 2020</small></p>
-                            <h3>Trendy Summer Fashion
-                            </h3>
-                            <p>
-                                To take a trivial of us ever undertakes laborious physical exercise, except to obtain some advantage from it? But who has any right to find fault with a man who chooses...
-                            </p>
-                        </div>
-                    </div>
+                <div class="column col-md-6" style="height: 250px;">
+                    <p style="font-size: 30px; color: white;">新闻</p>
+                    <ul>
+                        <li style="height: 45px;">
+                            <a id="news_1" target="_blank" href="www.baidu.com" style="font-size: 15px; color: whitesmoke;">news1</a>
+                        </li>
+                        <li style="height: 45px;">
+                            <a id="news_2" target="_blank" href="www.baidu.com" style="font-size: 15px; color: whitesmoke;">news2</a>
+                        </li>
+                        <li style="height: 45px;">
+                            <a id="news_3" target="_blank" href="www.baidu.com" style="font-size: 15px; color: whitesmoke;">news3</a>
+                        </li>
+                        <li style="height: 45px;">
+                            <a href="./news.html" target="_blank" style="font-size: 15px; color: rgba(245, 245, 245, 0.7);">more...</a>
+                        </li>
+                    </ul>
                 </div>
-                <div id="news1" class="col-md-8 mb-4 pr-0 pd-md">
-                    <div class="card">
-                        <img class="card-img h-100" src="images/gallery-img2.jpg" alt="">
-
-                        <div class="card-body">
-                            <p><small>march 27, 2020</small></p>
-                            <h3>Trendy Summer Fashion
-                            </h3>
-                            <p>To take a trivial example, which of us ever undertakes laborious physical exercise, some advantage from it? fault with a man who chooses...</p>
+            </div>
+            <div class="col-md-6">
+                <ul>
+                    <li style="padding: 3px;border-bottom:1px solid rgba(255, 255, 255, 0.1);">
+                        <div class="container" style="width: 100%;">
+                            <div class="col-sm-6">
+                                <a href="#"><img src="./images/work/1.jpg" alt="MyPassion" class="alignleft"></a>
+                            </div>
+                            <div class="col-sm-6">
+                                <p>
+                                    <span>26 May, 2013.</span><br>
+                                    <a href="#">Blandit Rutrum, Erat et Sagittis.</a>
+                                </p>
+                            </div>
                         </div>
-
-                    </div>
-                </div>
-                <div id="news1" class="col-md-4 pl-4 mb-4">
-                    <div class="card">
-                        <img class="card-img-top" src="images/gallery-img3.jpg" alt="">
-                        <div class="card-body">
-                            <p><small>march 27, 2020</small></p>
-                            <h3>Trendy Summer Fashion
-                            </h3>
-                            <p>To take a trivial example, which of us ever undertakes laborious physical exercise, some advantage from it? fault with a man who chooses...</p>
+                    </li>
+                    <li style="padding: 3px;border-bottom:1px solid rgba(255, 255, 255, 0.1);">
+                        <div class="container" style="width: 100%;">
+                            <div class="col-sm-6">
+                                <a href="#"><img src="./images/work/2.jpg" alt="MyPassion" class="alignleft"></a>
+                            </div>
+                            <div class="col-sm-6">
+                                <p>
+                                    <span>26 May, 2013.</span><br>
+                                    <a href="#">Blandit Rutrum, Erat et Sagittis.</a>
+                                </p>
+                            </div>
                         </div>
-                    </div>
-                </div>
-                <a style="text-align: right;">更多新闻...</a>
+                    </li>
+                    <li style="padding: 3px;border-bottom:1px solid rgba(255, 255, 255, 0.1);">
+                        <div class="container" style="width: 100%;">
+                            <div class="col-sm-6">
+                                <a href="#"><img src="./images/work/3.jpg" alt="MyPassion" class="alignleft"></a>
+                            </div>
+                            <div class="col-sm-6">
+                                <p>
+                                    <span>26 May, 2013.</span><br>
+                                    <a href="#">Blandit Rutrum, Erat et Sagittis.</a>
+                                </p>
+                            </div>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+            <div class="col-md-6">
+                <ul>
+                    <li style="padding: 3px;border-bottom:1px solid rgba(255, 255, 255, 0.1);">
+                        <div class="container" style="width: 100%;">
+                            <div class="col-sm-6">
+                                <a href="#"><img src="./images/work/4.jpg" alt="MyPassion" class="alignleft"></a>
+                            </div>
+                            <div class="col-sm-6">
+                                <p>
+                                    <span>26 May, 2013.</span><br>
+                                    <a href="#">Blandit Rutrum, Erat et Sagittis.</a>
+                                </p>
+                            </div>
+                        </div>
+                    </li>
+                    <li style="padding: 3px;border-bottom:1px solid rgba(255, 255, 255, 0.1);">
+                        <div class="container" style="width: 100%;">
+                            <div class="col-sm-6">
+                                <a href="#"><img src="./images/work/5.jpg" alt="MyPassion" class="alignleft"></a>
+                            </div>
+                            <div class="col-sm-6">
+                                <p>
+                                    <span>26 May, 2013.</span><br>
+                                    <a href="#">Blandit Rutrum, Erat et Sagittis.</a>
+                                </p>
+                            </div>
+                        </div>
+                    </li>
+                    <li style="padding: 3px;border-bottom:1px solid rgba(255, 255, 255, 0.1);">
+                        <div class="container" style="width: 100%;">
+                            <div class="col-sm-6">
+                                <a href="#"><img src="./images/work/6.jpg" alt="MyPassion" class="alignleft"></a>
+                            </div>
+                            <div class="col-sm-6">
+                                <p>
+                                    <span>26 May, 2013.</span><br>
+                                    <a href="#">Blandit Rutrum, Erat et Sagittis.</a>
+                                </p>
+                            </div>
+                        </div>
+                    </li>
+                </ul>
             </div>
         </div>
     </div>
