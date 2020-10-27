@@ -1,51 +1,16 @@
-var dataUrlm = "http://api.tianapi.com/txapi/ncovcity/index?key=51ada08c82189b4e519e27149e77e6fd";
-var dataUrlBackupm = "https://lab.isaaclin.cn/nCoV/api/area";
-
-$(document).ready(function() {
-    initChart_m();
+var w = window.innerWidth;
+var stock_market = echarts.init(document.getElementById('stock_market'));
+stock_market.showLoading({
+    animation: 'QuarticIn',
+    text: 'Loading',
 });
 
-var initChart_m = function() {
-    $.ajax({
-        url: dataUrlm,
-        type: 'get',
-        success: function(res) {
-            if (res.msg == "success") {
-                var chartData = res.newslist;
-                //console.log(chartData)
-                var datalist_map = [];
-                datalist_map.push({
-                    name: '南海诸岛',
-                    value: 0
-                });
-                //console.log(datalist_map)
-                for (var i in chartData) {
-                    var provincename = chartData[i].provinceShortName;
-                    var confirm = chartData[i].confirmedCount;
-                    datalist_map.push({
-                        name: provincename,
-                        value: confirm
-                    });
 
-                }
-                console.log(datalist_map);
-                initChart_map(datalist_map);
-                return;
-            }
-            alert("map获取数据失败");
-        },
-        error: function(res) {
-            if (res.state() === "rejected" && !this.url.includes(dataUrlBackupm)) {
-                this.url = this.url.replace(dataUrlm, dataUrlBackupm);
-                $.ajax(this);
-            }
-        }
-    });
-}
+$(document).ready(function() {
+    initChart1();
+});
 
-var initChart_map = function(datalist) {
-    var stock_market = echarts.init(document.getElementById('stock_market'));
-
+var initChart1 = function() {
     // 数据意义：开盘(open)，收盘(close)，最低(lowest)，最高(highest)
     var data0 = splitData([
         ['2016-05-20', 3.781, 3.81, 3.761, 3.82],
@@ -261,7 +226,6 @@ var initChart_map = function(datalist) {
         ['2017-03-31', 7.32, 7.47, 7.32, 7.53]
     ]);
 
-
     function splitData(rawData) {
         var categoryData = [];
         var values = []
@@ -441,5 +405,6 @@ var initChart_map = function(datalist) {
 
         ]
     };
+    stock_market.hideLoading();
     stock_market.setOption(option);
 }
