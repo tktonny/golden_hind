@@ -145,11 +145,11 @@
 
     <!--登录模态框-->
     <Modal id="modal2" role="dialog" class="modal fade">
-        <div class="dowebok modal-dialog" id="dowebok" style="background-color: black;margin-top: 160px;">
-            <div class="form-container sign-up-container">
+        <div class="dowebok modal-dialog" id="dowebok" style="background-color: black;margin-top: 160px; ">
+            <div class="form-container sign-up-container hidden-xs">
                 <form action="#" style="background-color:#1e1e1e;">
-                    <h1 style="color:cornsilk;">理财经理登录</h1>
-                    <div class="social-container">
+                    <h1 style="color:cornsilk;">理财经理<br>登录</h1>
+                    <div class="social-container hidden-xs">
                         <a href="#" class="social"><i class="fa fa-phone"></i></a>
                         <a href="#" class="social"><i class="fa fa-envelope"></i></a>
                         <a href="#" class="social"><i class="fa fa-wechat"></i></a>
@@ -160,10 +160,38 @@
                     <button>登录</button>
                 </form>
             </div>
-            <div class="form-container sign-in-container">
+            <div class="form-container sign-up-container visible-xs">
+                <form action="#" style="background-color:#1e1e1e;padding: 0px;">
+                    <h1 style="color:cornsilk;">理财经理<br>登录</h1>
+                    <div class="social-container hidden-xs">
+                        <a href="#" class="social"><i class="fa fa-phone"></i></a>
+                        <a href="#" class="social"><i class="fa fa-envelope"></i></a>
+                        <a href="#" class="social"><i class="fa fa-wechat"></i></a>
+                    </div>
+                    <input type="tel" placeholder="手机号码">
+                    <input type="password" placeholder="密码">
+                    <a href="sign_up.html">尚未注册</a>
+                    <button>登录</button>
+                </form>
+            </div>
+            <div class="form-container sign-in-container hidden-xs">
                 <form action="#" style="background-color: #1e1e1e;">
-                    <h1 style="color:cornsilk;">投资者登录</h1>
-                    <div class="social-container">
+                    <h1 style="color:cornsilk;">投资者<br>登录</h1>
+                    <div class="social-container hidden-xs">
+                        <a href="#" class="social"><i class="fa fa-phone"></i></a>
+                        <a href="#" class="social"><i class="fa fa-envelope"></i></a>
+                        <a href="#" class="social"><i class="fa fa-wechat"></i></a>
+                    </div>
+                    <input type="tel" placeholder="手机号码">
+                    <input type="password" placeholder="密码">
+                    <a href="sign_up.html">尚未注册</a>
+                    <button>登录</button>
+                </form>
+            </div>
+            <div class="form-container sign-in-container visible-xs">
+                <form action="#" style="background-color: #1e1e1e;padding: 0px;">
+                    <h1 style="color:cornsilk;">投资者<br>登录</h1>
+                    <div class="social-container hidden-xs">
                         <a href="#" class="social"><i class="fa fa-phone"></i></a>
                         <a href="#" class="social"><i class="fa fa-envelope"></i></a>
                         <a href="#" class="social"><i class="fa fa-wechat"></i></a>
@@ -177,14 +205,24 @@
             <div class="overlay-container">
                 <div class="overlay">
                     <div class="overlay-panel overlay-left">
-                        <h1>&ensp;投资者？</h1>
+                        <h1 class="hidden-xs">&ensp;投资者？</h1>
+                        <h1 class="visible-xs">投资<br>者？</h1>
+                        <p></p>
+                        <p></p>
                         <p style="color:#fff;">请使用您的帐号进行投资者登录</p>
-                        <button class="ghost" id="signIn">登录</button>
+                        <p></p>
+                        <p></p>
+                        <button class="ghost" id="signIn"><i class="fa fa-hand-o-left"></i></button>
                     </div>
                     <div class="overlay-panel overlay-right">
-                        <h1>&ensp;理财经理？</h1>
+                        <h1 class="hidden-xs">&ensp;理财经理？</h1>
+                        <h1 class="visible-xs">理财<br>经理?</h1>
+                        <p></p>
+                        <p></p>
                         <p style="color:#fff;">请使用您的帐号进行理财经理登录</p>
-                        <button class="ghost" id="signUp">登录</button>
+                        <p></p>
+                        <p></p>
+                        <button class="ghost" id="signUp"><i class="fa fa-hand-o-right"></i></button>
                     </div>
                 </div>
             </div>
