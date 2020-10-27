@@ -308,7 +308,7 @@ var initChart_map = function(datalist) {
                 },
                 {
                     offset: 1,
-                    color: '#000000' // 100% 处的颜色
+                    color: '#1e1e1e' // 100% 处的颜色
                 }
             ],
         },
@@ -325,6 +325,18 @@ var initChart_map = function(datalist) {
             }
         },
         xAxis: {
+            axisLabel: { color: 'white' }, // x轴字体颜色
+
+
+            axisLine: {
+                lineStyle: { color: 'white' } // x轴坐标轴颜色
+            },
+
+
+            axisTick: {
+                lineStyle: { color: 'white' } // x轴刻度的颜色
+            },
+
             type: 'category',
             data: data0.categoryData,
             scale: true,
@@ -341,13 +353,21 @@ var initChart_map = function(datalist) {
         },
         yAxis: {
             scale: true,
-            splitArea: {
-                show: true
-            }
+            axisLabel: { color: 'white' }, // y轴字体颜色
+
+
+            axisLine: {
+                lineStyle: { color: 'white' } // y轴坐标轴颜色
+            },
+
+
+            axisTick: {
+                lineStyle: { color: 'white' } // y轴刻度的颜色
+            },
         },
         dataZoom: [{
             type: 'inside',
-            start: 50,
+            start: 40,
             end: 100
         }, {
             show: true,
@@ -360,83 +380,8 @@ var initChart_map = function(datalist) {
                 name: '日K',
                 type: 'candlestick',
                 data: data0.values,
-                markPoint: {
-                    label: {
-                        normal: {
-                            formatter: function(param) {
-                                return param != null ? Math.round(param.value) : '';
-                            }
-                        }
-                    },
-                    data: [{
-                        name: 'XX标点',
-                        coord: ['2013/5/31', 2300],
-                        value: 2300,
-                        itemStyle: {
-                            normal: {
-                                color: 'rgb(41,60,85)'
-                            }
-                        }
-                    }, {
-                        name: 'highest value',
-                        type: 'max',
-                        valueDim: 'highest'
-                    }, {
-                        name: 'lowest value',
-                        type: 'min',
-                        valueDim: 'lowest'
-                    }, {
-                        name: 'average value on close',
-                        type: 'average',
-                        valueDim: 'close'
-                    }],
-                    tooltip: {
-                        formatter: function(param) {
-                            return param.name + '<br>' + (param.data.coord || '');
-                        }
-                    }
-                },
-                markLine: {
-                    symbol: ['none', 'none'],
-                    data: [
-                        [{
-                            name: 'from lowest to highest',
-                            type: 'min',
-                            valueDim: 'lowest',
-                            symbol: 'circle',
-                            symbolSize: 10,
-                            label: {
-                                normal: {
-                                    show: false
-                                },
-                                emphasis: {
-                                    show: false
-                                }
-                            }
-                        }, {
-                            type: 'max',
-                            valueDim: 'highest',
-                            symbol: 'circle',
-                            symbolSize: 10,
-                            label: {
-                                normal: {
-                                    show: false
-                                },
-                                emphasis: {
-                                    show: false
-                                }
-                            }
-                        }], {
-                            name: 'min line on close',
-                            type: 'min',
-                            valueDim: 'close'
-                        }, {
-                            name: 'max line on close',
-                            type: 'max',
-                            valueDim: 'close'
-                        }
-                    ]
-                }
+
+
             }, {
                 name: 'MA5',
                 type: 'line',
@@ -445,6 +390,11 @@ var initChart_map = function(datalist) {
                 lineStyle: {
                     normal: {
                         opacity: 0.5
+                    }
+                },
+                itemStyle: {
+                    normal: {
+                        color: 'white'
                     }
                 }
             }, {
@@ -456,6 +406,11 @@ var initChart_map = function(datalist) {
                     normal: {
                         opacity: 0.5
                     }
+                },
+                itemStyle: {
+                    normal: {
+                        color: 'aqua'
+                    }
                 }
             }, {
                 name: 'MA20',
@@ -465,6 +420,11 @@ var initChart_map = function(datalist) {
                 lineStyle: {
                     normal: {
                         opacity: 0.5
+                    }
+                },
+                itemStyle: {
+                    normal: {
+                        color: 'yellow'
                     }
                 }
             }, {
