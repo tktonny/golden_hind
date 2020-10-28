@@ -10,6 +10,48 @@
     color: #Fff;
 }
 
+select {
+    border: none;
+    outline: none;
+    height: 40px;
+    width: 245.2px;
+    line-height: 40px;
+    appearance: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    background-color: rgba(255, 255, 255, 0.1);
+}
+
+input {
+    border: none;
+    outline: none;
+    height: 40px;
+    width: 245.2px;
+    line-height: 40px;
+    background-color: rgba(255, 255, 255, 0.1);
+    color: white;
+}
+
+input[type=radio] {
+    width: 15px;
+    height: 15px;
+    margin-left: 40px!important;
+}
+
+.invest_form {
+    background-color: rgba(255, 255, 255, 0.1);
+    padding: 25px 20px;
+    margin-top: 35px;
+    color: #fff;
+}
+
+.invest_form p {
+    color: aliceblue;
+    font-size: 25px;
+    font-weight: 400;
+    line-height: 1.5;
+}
+
 a:hover {
     color: #fff!important;
 }
@@ -175,7 +217,7 @@ label {
 
 [type="radio"]:not(:checked)+span,
 [type="radio"]:checked+span {
-    font-size: 1rem;
+    font-size: 15px;
 }
 
 [type="radio"]+span:before,
