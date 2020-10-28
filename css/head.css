@@ -38,6 +38,15 @@ input[type=radio] {
     margin-left: 40px!important;
 }
 
+.invest_upgrade {
+    margin-top: 35px;
+    color: #fff;
+}
+
+.invest_upgrade span {
+    font-size: 15px;
+}
+
 .invest_form {
     background-color: rgba(255, 255, 255, 0.1);
     padding: 25px 20px;
